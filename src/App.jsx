@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage"
 import PostsPage from "./pages/PostsPage"
 import AboutPage from "./pages/AboutPage"
 import PostDetailPage from "./pages/PostDetailPage"
+import AddPostPage from "./pages/AddPostPage"
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/posts" Component={PostsPage} />
           <Route path="/about" Component={AboutPage} />
           <Route path="/posts/:id" Component={PostDetailPage} />
+          <Route path="/nuovo-post" Component={AddPostPage} />
         </Route>
       </Routes>
     </BrowserRouter>
