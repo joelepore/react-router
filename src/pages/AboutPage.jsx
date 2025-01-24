@@ -1,6 +1,10 @@
+import Title from "../components/Title"
+
 const AboutPage = () => {
   return (
-    <section>AboutPage</section>
+    <section>
+      <Title text="Chi siamo" />
+    </section>
   )
 }
 

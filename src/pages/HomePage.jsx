@@ -1,6 +1,10 @@
+import Title from "../components/Title"
+
 const HomePage = () => {
   return (
-    <section>HomePage</section>
+    <section>
+      <Title text="Home" />
+    </section>
   )
 }
 

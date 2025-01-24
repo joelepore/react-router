@@ -1,6 +1,10 @@
+import Title from "../components/Title"
+
 const PostsPage = () => {
   return (
-    <section>PostsPage</section>
+    <section>
+      <Title text="Tutti i post" />
+    </section>
   )
 }
 

@@ -5,7 +5,7 @@ const DefaultLayout = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="max-w-screen-md mx-auto py-6">
         <Outlet />
       </main>
     </>
