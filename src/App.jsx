@@ -3,6 +3,7 @@ import DefaultLayout from "./layouts/DefaultLayout"
 import HomePage from "./pages/HomePage"
 import PostsPage from "./pages/PostsPage"
 import AboutPage from "./pages/AboutPage"
+import PostDetailPage from "./pages/PostDetailPage"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
           <Route path="/" Component={HomePage} />
           <Route path="/posts" Component={PostsPage} />
           <Route path="/about" Component={AboutPage} />
+          <Route path="/posts/:id" Component={PostDetailPage} />
         </Route>
       </Routes>
     </BrowserRouter>
