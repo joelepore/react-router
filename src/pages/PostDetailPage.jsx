@@ -21,6 +21,12 @@ const PostDetailPage = () => {
       .catch(err => console.error(err));
   }
 
+  const handleDeletePost = () => {
+    axios.delete(`${baseApiUrl}/posts/${id}`)
+      .then(res => navigate('/posts'))
+      .catch(err => console.error(err));
+  }
+
   useEffect(fetchPost, []);
 
   return (
@@ -30,7 +36,10 @@ const PostDetailPage = () => {
           className="cursor-pointer"
           onClick={() => navigate(-1)}
         />
-        <FaTrashAlt className="text-2xl cursor-pointer" />
+        <FaTrashAlt
+          className="text-2xl cursor-pointer"
+          onClick={handleDeletePost}
+        />
       </div>
       <img src={post?.image} alt={post?.title} className="w-full" />
       <Title text={post?.title} />
