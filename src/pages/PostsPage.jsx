@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Title from "../components/Title"
 import axios from "axios";
 import PostCard from "../components/PostCard";
+import Button from "../components/Button";
 
 const PostsPage = () => {
   const baseApiUrl = import.meta.env.VITE_BASE_API_URL;
@@ -22,7 +23,10 @@ const PostsPage = () => {
 
   return (
     <section>
-      <Title text="Tutti i post" />
+      <div className="flex justify-between items-center">
+        <Title text="Tutti i post" />
+        <Button text="Aggiungi un nuovo post" />
+      </div>
       <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3 justify-items-center">
         {posts?.map(post => (
           <PostCard
